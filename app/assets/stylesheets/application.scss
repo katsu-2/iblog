@@ -13,3 +13,54 @@
  *= require_tree .
  *= require_self
  */
+ @import "bootstrap";
+ @import "posts";
+
+
+// .header {
+//   background-color: #20c997;
+
+//   .navbar-brand {
+
+//     .brand-title {
+//       color: white;
+//       font-size: 30px;
+//     }
+//   }
+
+//   .navbar-button {
+
+//   }
+// }
+
+.header {
+  background-color: #17a2b8ed;
+
+  .navbar {
+
+    .navbar-brand {
+
+      .brand-title{
+        color: white;
+        text-decoration: none;
+        line-height: 2em;
+        font-size: 1.5em;
+        padding: 0 20px;
+      }
+    }
+
+    .navbar-button {
+      padding-right: 30px;
+
+      .navbar-right {
+
+        .list-inline-item {
+
+          .nav-link {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
