@@ -5,12 +5,13 @@
       <div class="post col-sm-4 col-md-4 col-lg-4">
         <%= link_to post_path(post) do %>
         <div class="post__img">
-          <img src="https://cdn.pixabay.com/photo/2017/11/10/05/48/user-2935527_1280.png" width="200" height="200">
+          <%= image_tag post.image.url, :class => "post__img__tag" if post.image? %>
         </div>
+        <hr>
         <div class="post__under">
-          <p class="post__title">
+          <h3 class="post__title">
             <%= post.title %>
-          </p>
+          </h3>
           <p class="post__date">
             2018/03/13
           </p>
