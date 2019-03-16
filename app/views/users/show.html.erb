@@ -1,0 +1,25 @@
+<h2><%= current_user.name %>さんのページ</h2>
+<div class="contents">
+  <div class="row">
+    <% @posts.each do |post| %>
+    <div class="post user__post col-sm-12 col-md-5 col-lg-5">
+      <div class="post__img">
+        <%= image_tag post.image.url if post.image? %>
+      </div>
+      <hr>
+      <div class="post__under">
+        <h3 class="post__title">
+          <%= post.title %>
+        </h3>
+        <h5 class="post__text">
+          <%= post.text %>
+        </h5>
+        <p class="post__date">
+          2018/03/13
+        </p>
+
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
