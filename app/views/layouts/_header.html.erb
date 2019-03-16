@@ -5,6 +5,7 @@
     </div>
     <div class="navbar-button">
       <ul class="navbar-right">
+        <% if user_signed_in? %>
         <li class="nav-item list-inline-item">
             <%= link_to '検索', '#', class: "nav-link" %>
         </li>
@@ -26,6 +27,16 @@
               <%= link_to 'ログアウト',  destroy_user_session_path, class: " dropdown-item", method: :delete, data: { confirm: "本当にいいですか？"} %>
             </div>
           </li>
+
+        <% else %>
+          <li class="nav-item list-inline-item">
+            <%= link_to 'サインアップ', new_user_registration_path, class: "nav-link" %>
+          </li>
+
+          <li class="list-inline-item">
+            <%= link_to 'ログイン', new_user_session_path, class: "nav-link", id: "login-show" %>
+          </li>
+        <% end %>
       </ul>
     </div>
   </div>
