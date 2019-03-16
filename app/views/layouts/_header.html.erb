@@ -13,9 +13,19 @@
             <%= link_to '投稿', new_post_path, class: "nav-link" %>
         </li>
 
-        <li class="nav-item list-inline-item">
-            <%= link_to 'ユーザー', '#', class: "nav-link" %>
-        </li>
+        <li class="nav-item dropdown list-inline-item">
+            <a class="nav-link dropdown-toggle list-inline-item" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              ユーザー
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <%= link_to 'マイページ', user_path(current_user.id), class: "dropdown-item " %>
+
+              <%= link_to "プロフィール編集", edit_user_registration_path, class: "dropdown-item" %>
+
+              <div class="dropdown-divider"></div>
+              <%= link_to 'ログアウト',  destroy_user_session_path, class: " dropdown-item", method: :delete, data: { confirm: "本当にいいですか？"} %>
+            </div>
+          </li>
       </ul>
     </div>
   </div>
