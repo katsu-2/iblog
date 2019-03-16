@@ -1,2 +1,33 @@
-<%= @post.title %>
-<%= @post.text %>
+
+<div class="contents">
+  <div class="post col-sm-12 col-md-5 col-lg-5">
+    <div class="post__img">
+      <img src="https://cdn.pixabay.com/photo/2017/11/10/05/48/user-2935527_1280.png" width="200" height="200">
+    </div>
+    <div class="post__under">
+      <h3 class="post__title">
+        <%= @post.title %>
+      </h3>
+      <h5 class="post__text">
+        <%= @post.text %>
+      </h5>
+      <p class="post__date">
+        2018/03/13
+      </p>
+      <div class="button">
+        <%= link_to '編集', edit_post_path, class: "user_button" %>
+        <%= link_to '削除', post_path(@post), class: "user__button", method: :delete, data: {confirm: "本当にいいですか？"} %>
+      </div>
+    </div>
+  </div>
+
+  <div class="comments col-sm-12 col-md-7 col-lg-7">
+    <div class="comment">
+      <div class="comment__header">
+        <h3>コメント</h3>
+      </div>
+      <div class="comment__body"></div>
+    </div>
+    <div class="comment__form"></div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+
+  <div class="contents">
+    <div class="row">
+      <% @posts.each do |post| %>
+      <div class="post col-sm-4 col-md-4 col-lg-4">
+        <%= link_to post_path(post) do %>
+        <div class="post__img">
+          <%= image_tag post.image.url, :class => "post__img__tag" if post.image? %>
+        </div>
+        <hr>
+        <div class="post__under">
+          <h3 class="post__title">
+            <%= post.title %>
+          </h3>
+          <p class="post__date">
+            2018/03/13
+          </p>
+        </div>
+        <% end %>
+      </div>
+      <% end %>
+    </div>
+  </div>
