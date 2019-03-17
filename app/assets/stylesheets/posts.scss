@@ -15,15 +15,35 @@
       height: 200px;
 
       .post__img__tag {
+        object-fit: contain;
         width: 100%;
-        height: auto;
-        object-fit: cover;
+        height: 190px;
       }
     }
     &__under {
-      &__title {
+      margin-top: 20px;
+      padding: 10px 5px;
+
+      .post__under__top {
+
+        .post__title {
+          font-weight: bold;
+          font-size: 1.4rem;
+          margin-bottom: 5px;
+          }
+
+        .post-text {
+        }
       }
-      &__date {
+
+      .post__under__under {
+        .post__date {
+          color: rgba(0,0,0,0.5);
+        }
+
+        .post__user {
+          color: rgba(0,0,0,0.5);
+        }
       }
     }
   }
