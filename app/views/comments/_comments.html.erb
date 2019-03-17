@@ -1,0 +1,8 @@
+<% @comments.each do |comment| %>
+  <div class="comment__body__index">
+    <p class="comment__body__index__text">
+      <strong><%= comment.user.name %>: </strong>
+      <%= comment.comment %>
+    </p>
+  </div>
+<% end %>
