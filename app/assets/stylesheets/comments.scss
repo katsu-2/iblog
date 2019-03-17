@@ -2,9 +2,33 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+
+
+///////////comment//////////////
+
+.comcom {
+  text-align: center;
+}
+.comment__form__field {
+
+  .com__field {
+    display: block;
+    width: 100%;
+    height: 100px;
+    line-height: 1.2rem;
+    margin: 10px auto;
+  }
+}
+
+#submit__btn {
+  text-align: right;
+}
+
 .comment__body__index {
+  // width: 500px;
   border: 1px solid #cfcfcf;
-  margin-top: 10px;
+  margin: 10px auto;
   padding: 10px;
 
   &__text strong {

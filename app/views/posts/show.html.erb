@@ -1,30 +1,38 @@
 
 <div class="contents">
-  <div class="post">
-    <div class="post__img">
-      <%= image_tag @post.image.url if @post.image? %>
-    </div>
-    <div class="post__under">
+  <div class="post post--show col-md-6 col-lg-6">
+  <div class="post__img">
+    <%= image_tag @post.image.url, :class => "post__img--show" if @post.image? %>
+  </div>
+  <hr>
+  <div class="post__under">
+    <div class="post__under__top">
       <h3 class="post__title">
         <%= @post.title %>
       </h3>
       <h5 class="post__text">
         <%= @post.text %>
       </h5>
+    </div>
+    <div class="post__under__under">
       <p class="post__date">
-        2018/03/13
+        <%= @post.created_at.to_s(:datetime_base)%>
       </p>
+    <% if user_signed_in? && @post.user_id == current_user.id %>
       <div class="button">
-        <%= link_to '編集', edit_post_path, class: "user_button" %>
+        <%= link_to '編集', edit_post_path, class: "user__button" %>
         <%= link_to '削除', post_path(@post), class: "user__button", method: :delete, data: {confirm: "本当にいいですか？"} %>
       </div>
+    <% end %>
     </div>
   </div>
+</div>
+
 
   <div class="comments">
     <div class="comment">
       <div class="comment__header">
-        <h3>コメント</h3>
+        <h3 class="comcom">コメント</h3>
       </div>
       <div class="comment__form">
         <%= render 'comments/form' %>
