@@ -1,0 +1,10 @@
+
+<%= form_for([@post, @post.comments.build],html: {id: 'new_comment'}) do |f| %>
+  <div class="comment__form__field">
+    <%= f. text_area :comment, id: "com" %>
+  </div>
+
+  <div>
+    <%= f.submit id: "submit__btn" %>
+  </div>
+<% end %>
