@@ -8,17 +8,18 @@
       </div>
       <hr>
       <div class="post__under">
-        <h3 class="post__title">
-          <%= post.title %>
-        </h3>
-        <h5 class="post__text">
-          <%= post.text %>
-        </h5>
-        <p class="post__date">
-          2018/03/13
-        </p>
-
-      </div>
+          <div class="post__under__top">
+            <p class="post__title">
+              <%= post.title %>
+            </p>
+            <p class="post__text">
+              <%= truncate(post.text, length: 30) %>
+            </p>
+          </div>
+          <div class="post__under__under">
+            <p class="post__date">
+              <%= post.created_at.to_s(:datetime_base)%>
+            </p>
     </div>
     <% end %>
   </div>

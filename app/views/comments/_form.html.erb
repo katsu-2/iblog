@@ -1,10 +1,10 @@
 
 <%= form_for([@post, @post.comments.build],html: {id: 'new_comment'}) do |f| %>
   <div class="comment__form__field">
-    <%= f. text_area :comment, id: "com" %>
+    <%= f. text_area :comment, id: "com", class: "com__field", placeholder: "ここにコメントをしてください" %>
   </div>
 
   <div>
-    <%= f.submit id: "submit__btn" %>
+    <%= f.submit id: "submit__btn", class: "user__button" %>
   </div>
 <% end %>
