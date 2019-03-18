@@ -26,16 +26,7 @@
     <% end %>
     </div>
     <div class="post__like">
-      <% if current_user.already_liked?(@post) %>
-        <%= link_to post_like_path(@post), method: :delete do %>
-          <%= fa_icon 'heart', id: "heart__red" %>
-        <% end %>
-      <% else %>
-        <%= link_to post_likes_path(@post), method: :post do %>
-          <%= fa_icon 'heart', id: "heart__normal" %>
-        <% end %>
-      <% end %>
-      <%= @post.liked_users.count %>
+      <%= render 'likes/like' %>
     </div>
   </div>
 </div>
