@@ -1,14 +1,14 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
+@import "common";
 
 ////////////index//////////////
 .contents {
   margin-top: 30px;
 
   .post {
-    border: 1px solid #cfcfcf;
+    @include border;
     border-radius: 5px;
     margin: 20px 0;
     padding: 1.25rem;
@@ -47,7 +47,7 @@
           color: rgba(0,0,0,0.5);
 
           & span {
-            color: #33A9BD;
+            color: $blue;
           }
         }
       }
@@ -79,9 +79,9 @@
 }
 
 .user__button {
-  border: 1px solid #33A9BD;
+  border: 1px solid $blue;
   padding: 5px 10px;
-  background-color: #33A9BD;
+  background-color: $blue;
   color: white;
   text-decoration: none;
   border-radius: 20px;
@@ -103,7 +103,7 @@
 //////////////form/////////////
 
 .form__field {
-  border: 1px solid #cfcfcf;
+  @include border;
   border-radius: 10px;
 
   .form {
