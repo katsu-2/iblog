@@ -1,26 +1,6 @@
 <h2><%= current_user.name %>さんのページ</h2>
 <div class="contents">
   <div class="row">
-    <% @posts.each do |post| %>
-    <div class="post user__post col-sm-12 col-md-5 col-lg-5">
-      <div class="post__img">
-        <%= image_tag post.image.url if post.image? %>
-      </div>
-      <hr>
-      <div class="post__under">
-          <div class="post__under__top">
-            <p class="post__title">
-              <%= post.title %>
-            </p>
-            <p class="post__text">
-              <%= truncate(post.text, length: 30) %>
-            </p>
-          </div>
-          <div class="post__under__under">
-            <p class="post__date">
-              <%= post.created_at.to_s(:datetime_base)%>
-            </p>
-    </div>
-    <% end %>
+    <%= render 'posts/post' %>
   </div>
 </div>

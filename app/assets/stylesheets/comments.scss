@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import "common";
 
 
 
@@ -27,11 +28,12 @@
 
 .comment__body__index {
   // width: 500px;
-  border: 1px solid #cfcfcf;
+  @include border;
   margin: 10px auto;
   padding: 10px;
 
+
   &__text strong {
-    color: #33A9BD;
+    color: $blue;
   }
 }

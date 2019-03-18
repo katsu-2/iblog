@@ -1,39 +1,6 @@
 
   <div class="contents">
     <div class="row">
-      <% @posts.each do |post| %>
-      <div class="post col-sm-6 col-md-4 col-lg-4">
-        <%= link_to post_path(post) do %>
-        <div class="post__img">
-          <%= image_tag post.image.url, :class => "post__img__tag" if post.image? %>
-        </div>
-        <% end %>
-        <hr>
-        <div class="post__under">
-          <div class="post__under__top">
-            <p class="post__title">
-              <%= post.title %>
-            </p>
-            <p class="post__text">
-              <%= truncate(post.text, length: 30) %>
-            </p>
-          </div>
-          <div class="post__under__under">
-            <p class="post__date">
-              <%= post.created_at.to_s(:datetime_base)%>
-            </p>
-            <p class="post__user">
-              created by: <span><%= post.user.name %></span>
-            </p>
-          </div>
-          <div class="post__under__like">
-            <p class="post__like">
-              <%= fa_icon 'heart', id: "heart__red" %>
-              <%= post.liked_users.count %>
-            </p>
-          </div>
-        </div>
-      </div>
-      <% end %>
+      <%= render 'posts/post' %>
     </div>
   </div>
