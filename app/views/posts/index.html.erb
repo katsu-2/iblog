@@ -26,6 +26,12 @@
               created by: <span><%= post.user.name %></span>
             </p>
           </div>
+          <div class="post__under__like">
+            <p class="post__like">
+              <%= fa_icon 'heart', id: "heart__red" %>
+              <%= post.liked_users.count %>
+            </p>
+          </div>
         </div>
       </div>
       <% end %>
