@@ -1,24 +1,34 @@
-# README
+# iblog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## アプリ概要
+簡単なブログアプリで画像も投稿できるようにしました。
+一覧では１つ１つの記事の本文をtruncateメソッドを使って30字だけを表示するようにして全文は詳細ページで閲覧できるように設定しています。
 
-Things you may want to cover:
+記事一覧で特定の記事をクリックすると詳細ページに飛べ、いいねやコメントをすることができます。
 
-* Ruby version
 
-* System dependencies
+## 機能一覧
 
-* Configuration
+### 投稿
+・記事投稿（画像をプレビューできます）
+・画像投稿（画像がない場合はデフォルトで洋梨の画像表示）
+・投稿編集機能
+・投稿削除機能
 
-* Database creation
+### コメント
+・コメント機能（Ajax）
 
-* Database initialization
+### ユーザー
+・ログイン
+・ログアウト
+・サインアップ
 
-* How to run the test suite
+### いいね
+・いいね機能（Ajax）
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...
+## これから付け加える予定機能
+・RSpec
+・検索機能
+・フォロー機能
+・ユーザー一覧
