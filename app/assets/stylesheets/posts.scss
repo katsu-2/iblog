@@ -88,6 +88,18 @@
   margin-left: 5px;
 }
 
+.post__like {
+  padding-top: 20px;
+
+  #heart__red {
+    color: red;
+  }
+
+  #heart__normal {
+    color: #cfcfcf;
+  }
+}
+
 //////////////form/////////////
 
 .form__field {
