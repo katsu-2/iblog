@@ -13,7 +13,7 @@
 
         <li class="nav-item dropdown list-inline-item">
             <a class="nav-link dropdown-toggle list-inline-item" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              ユーザー
+              <%= current_user.name %>
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <%= link_to 'マイページ', user_path(current_user.id), class: "dropdown-item " %>
